@@ -7,4 +7,6 @@ const syncConfig = {
   authToken: process.env.DB_TOKEN,
 }
 
-export const client = drizzle(createClient(syncConfig), { schema })
+export const config = createClient(syncConfig)
+
+export const client = drizzle(config, { schema })

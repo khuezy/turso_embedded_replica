@@ -1,7 +1,8 @@
 const { someAction } = require('./actions')
+
 export default async function Home() {
-  await someAction()
+  const r = await someAction()
   return (
-    <div>Hello</div>
+    <div>Hello, DB call took: {r}ms</div>
   );
 }
